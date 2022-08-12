@@ -1,5 +1,22 @@
 {
   "contacts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "email": "PROK_GP",
+      "password": "$Qwerty1",
+      "id": 2
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@admin.ad",
+      "password": "$2a$10$ggdNmyvXYX5MEDJWq00Ur.GoARhjmA1O9NrsnCAN5KSJYLKLxbhRe",
+      "username": "admin",
+      "id": 1
+    }
   ]
 }

@@ -1,28 +1,29 @@
 import {
+  createAction,
   createSlice, PayloadAction,
 } from '@reduxjs/toolkit';
 
 const initialState = {
-  isAppInitialized: false
+  isAppLoading: false,
 };
-
-type TAppState = typeof initialState
 
 const appSlice = createSlice({
   name: 'appSlice',
   initialState,
   reducers: {
-    setIsAppInitialized(
-      state: TAppState,
-      { payload: isAppInitialized }: PayloadAction<boolean>,
+    setIsAppLoading(
+      state,
+      { payload: isAppLoading }: PayloadAction<boolean>,
     ) {
-      state.isAppInitialized = isAppInitialized;
+      state.isAppLoading = isAppLoading;
     }
   },
 });
 
+export const initApp = createAction('appSlice/initApp');
+
 export const {
-  setIsAppInitialized,
+  setIsAppLoading,
 } = appSlice.actions;
 
 export const app = appSlice.reducer;

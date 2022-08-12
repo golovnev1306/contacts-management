@@ -1,11 +1,12 @@
-import { RouteObject } from 'react-router-dom';
 import { Auth, ContactList, NotFound } from './lazyPages';
 import withSuspenseWrapper from '../../common/hoc/withSuspenseWrapper';
+import PrivateRouteObject from '../../common/types/PrivateRouteObject';
 
-const routes: RouteObject[] = [
+const routes: PrivateRouteObject[] = [
   {
     path: '/',
     element: withSuspenseWrapper(ContactList),
+    isPrivate: true,
   },
   {
     path: '/auth',

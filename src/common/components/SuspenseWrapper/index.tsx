@@ -1,8 +1,8 @@
 import React, { PropsWithChildren, Suspense } from 'react';
-import { Spin } from 'antd';
+import Loading from '../Loading';
 
 const SuspenseWrapper = ({ children }: PropsWithChildren) => (
-  <Suspense fallback={<Spin />}>
+  <Suspense fallback={<Loading />}>
     {children}
   </Suspense>
 );

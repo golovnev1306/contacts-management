@@ -1,18 +1,25 @@
-import { Layout } from 'antd';
+import { Layout, Spin } from 'antd';
 import Routing from './routing';
-import 'antd/dist/antd.min.css';
+import useAppInitialize from '../common/hooks/useAppInitialize';
+import "../common/styles/index.scss";
+import styles from './App.module.scss';
+import Header from '../widgets/Header';
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 
 const App = () => {
+  const { isAppLoading } = useAppInitialize();
+
   return (
-    <Layout>
-      <Header />
-      <Content>
-        <Routing />
-      </Content>
-      <Footer />
-    </Layout>
+    <Spin spinning={isAppLoading} tip={'Loading app...'}>
+      <Layout className={styles.layout}>
+        <Header />
+        <Content className={styles.layoutContent}>
+          <Routing />
+        </Content>
+        <Footer>Created by Konstantin Golovnev</Footer>
+      </Layout>
+    </Spin>
   )
 }
 

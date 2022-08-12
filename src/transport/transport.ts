@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { message } from 'antd';
 import config from '../config';
 
@@ -12,11 +12,12 @@ const requestInterceptor = (axiosConfig: AxiosRequestConfig) => {
 };
 
 const responseInterceptorOnSuccess = (axiosConfig: AxiosResponse) => axiosConfig;
-const responseInterceptorOnError = async (error: any) => {
+const responseInterceptorOnError = async (error: AxiosError<string>) => {
+  console.log(error);
   if (error.response?.status === 500) {
     message.error('Внутренняя ошибка сервера');
-  } else if (error?.response?.data?.message) {
-    message.error(error?.response?.data?.message);
+  } else if (error?.response?.data) {
+    message.error(error?.response?.data);
   }
   throw error;
 };
