@@ -14,7 +14,7 @@ const useAuthState = () => {
 
   const onSubmit = useCallback((authData: Auth) => {
     dispatch(login(authData));
-  }, [dispatch])
+  }, [dispatch]);
 
   return {
     onSubmit,

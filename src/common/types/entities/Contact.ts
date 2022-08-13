@@ -1,7 +1,12 @@
 import Entity from '../Entity';
 
-type Contact = Entity & {
+export type Contact = {
   name: string
+  phone?: string
+  photo?: string
+  email?: string
 }
 
-export default Contact;
+type ContactEntity = Entity & Contact
+
+export default ContactEntity;

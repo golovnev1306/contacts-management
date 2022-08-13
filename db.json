@@ -1,14 +1,54 @@
 {
   "contacts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Vasya",
+      "email": "vasya@vasya.vasiliy",
+      "phone": "+7 444 444 44 44",
+      "photo": "https://do.ngs.ru/preview//do/b45b744c418e499f034d11391822c99f_1543928224_611_643.jpg",
+      "id": 1
     },
     {
-      "email": "PROK_GP",
-      "password": "$Qwerty1",
-      "id": 2
+      "name": "Barsik",
+      "email": "barsik@barsik.bars",
+      "phone": "+7 999 999 99 99",
+      "photo": "https://barsik-kot.ru/wp-content/uploads/2017/04/IMG_2632-web-825x510.jpg",
+      "id": 3
+    },
+    {
+      "name": "Stepan",
+      "email": "stepan@stepan.stepka",
+      "phone": "+7 555 555 55 55",
+      "photo": "https://m.spletnik.ru/img/2022/03/polly/20220328-kot-post.jpg",
+      "id": 9
+    },
+    {
+      "name": "Sharik",
+      "email": "Sharik@Sharik.com",
+      "phone": "+7 777 777 77 77",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2bNZVD-hZ6t9l04Z6k8oplncPcHw-h5s-rkNFdBL8m3b8df6voGP1KfgdQ-SBIOo4II4&usqp=CAU",
+      "id": 13
+    },
+    {
+      "name": "Mosk",
+      "email": "mosk@mao.da",
+      "phone": "+7 111 111 11 11",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Pearl_Winter_White_Russian_Dwarf_Hamster_-_Front.jpg/275px-Pearl_Winter_White_Russian_Dwarf_Hamster_-_Front.jpg",
+      "id": 16
+    },
+    {
+      "name": "Arton",
+      "id": 17
+    },
+    {
+      "name": "Test",
+      "id": 19
+    },
+    {
+      "name": "434",
+      "email": "434@esfds.fs",
+      "phone": "+7 000 000 00 00",
+      "photo": "https://barsik-kot.ru/wp-content/uploads/2017/04/IMG_2632-web-825x510.jpg",
+      "id": 20
     }
   ],
   "users": [

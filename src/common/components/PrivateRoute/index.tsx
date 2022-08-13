@@ -6,7 +6,6 @@ import Loading from '../Loading';
 const PrivateRoute = (element: ReactNode) => {
   const { isAuth, userHasBeenRequested } = useUser();
 
-  console.log(userHasBeenRequested);
   if (!userHasBeenRequested) {
     return <Loading />;
   }

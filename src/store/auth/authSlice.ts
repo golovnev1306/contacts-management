@@ -2,14 +2,14 @@ import {
   createAction,
   createSlice, PayloadAction,
 } from '@reduxjs/toolkit';
-import User from '../../common/types/entities/User';
 import Auth from '../../common/types/Auth';
+import UserEntity from '../../common/types/entities/User';
 
 const initialState = {
   isAuth: false,
   isLoading: false,
   userHasBeenRequested: false,
-  user: null as User | null,
+  user: null as UserEntity | null,
 };
 
 const authSlice = createSlice({
@@ -39,7 +39,7 @@ const authSlice = createSlice({
 
     setUser(
       state,
-      { payload: user }: PayloadAction<User | null>,
+      { payload: user }: PayloadAction<UserEntity | null>,
     ) {
       state.user = user;
     }

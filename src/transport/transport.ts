@@ -13,7 +13,6 @@ const requestInterceptor = (axiosConfig: AxiosRequestConfig) => {
 
 const responseInterceptorOnSuccess = (axiosConfig: AxiosResponse) => axiosConfig;
 const responseInterceptorOnError = async (error: AxiosError<string>) => {
-  console.log(error);
   if (error.response?.status === 500) {
     message.error('Внутренняя ошибка сервера');
   } else if (error?.response?.data) {

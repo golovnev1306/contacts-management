@@ -1,11 +1,11 @@
 import transport from '../transport';
 import AccessToken from '../../common/types/AccessToken';
-import User from '../../common/types/entities/User';
 import Auth from '../../common/types/Auth';
+import UserEntity from '../../common/types/entities/User';
 
 class authService {
   static current() {
-    return transport.get<User>('/users/1').then(response => response.data);
+    return transport.get<UserEntity>('/users/1').then(response => response.data);
   }
 
   static login(authData: Auth) {

@@ -1,11 +1,11 @@
 import { all, call, put, takeLeading } from "redux-saga/effects";
 import { getCurrentUser, login, logout, setIsAuth, setIsLoading, setUser, setUserHasBeenRequested } from './authSlice';
 import authService from '../../transport/services/authService';
-import User from '../../common/types/entities/User';
 import { PayloadAction } from '@reduxjs/toolkit';
 import Auth from '../../common/types/Auth';
 import AccessToken from '../../common/types/AccessToken';
 import { getToken, removeToken, setToken } from '../../common/helpers/token';
+import UserEntity from '../../common/types/entities/User';
 
 function* currentWorker() {
   try {
@@ -13,7 +13,7 @@ function* currentWorker() {
 
     const token = getToken();
     if (token) {
-      const user: User = yield call(authService.current);
+      const user: UserEntity = yield call(authService.current);
       yield put(setUser(user));
       yield put(setIsAuth(true));
     }
@@ -28,13 +28,14 @@ function* currentWorker() {
 function* loginWorker({ payload }: PayloadAction<Auth>) {
   try {
     yield put(setIsLoading(true));
-    const {accessToken, ...user}: AccessToken<User> = yield call(authService.login, payload);
+    const {
+      accessToken,
+      user,
+    }: AccessToken<{ user: UserEntity }> = yield call(authService.login, payload);
     setToken(accessToken);
 
     yield put(setUser(user));
     yield put(setIsAuth(true));
-
-    window.location.href = '/';
   } catch (e) {
     console.warn(e);
   } finally {

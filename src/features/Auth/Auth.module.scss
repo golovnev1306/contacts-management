@@ -2,4 +2,33 @@
 
 .authForm {
   width: $authFormWidth;
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+}
+
+.bgImgFirst, .bgImgSecond, .bgImgThirty {
+  position: absolute;
+  filter: opacity(0.2);
+  pointer-events: none;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.bgImgFirst {
+  transform: rotate(10deg);
+  right: 100px;
+}
+
+.bgImgSecond {
+  transform: rotate(-15deg);
+  right: 200px;
+  top: 450px;
+}
+
+.bgImgThirty {
+  transform: rotate(25deg);
+  right: 400px;
+  top: 700px;
 }

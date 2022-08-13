@@ -1,5 +1,5 @@
 type Entity = {
-  id: string
+  id: number
 }
 
 export default Entity;

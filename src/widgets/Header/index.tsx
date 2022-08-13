@@ -12,8 +12,12 @@ const Header: FC = () => {
   return (
     <AntHeader className={styles.header}>
       {isAuth && user && (
-        <FlexBox align={'center'}>
-          <span>{user.username}</span>
+        <FlexBox align={'center'} gap={'20px'}>
+          <FlexBox gap={'5px'}>{user.username}
+            <span className={styles.email}>
+              ({user.email})
+            </span>
+          </FlexBox>
           <Button
             onClick={onLogout}
             type={'default'}

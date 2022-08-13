@@ -12,12 +12,10 @@ const AuthForm: FC<{ onSubmit: (authData: Auth) => void }> = ({ onSubmit }) => {
     >
       <Form.Item
         name="email"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your email',
-          },
-        ]}
+        rules={[{
+          required: true,
+          message: 'Please input your email',
+        }]}
       >
         <Input
           prefix={<UserOutlined />}
@@ -26,12 +24,7 @@ const AuthForm: FC<{ onSubmit: (authData: Auth) => void }> = ({ onSubmit }) => {
       </Form.Item>
       <Form.Item
         name="password"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your password',
-          },
-        ]}
+        rules={[{ required: true }]}
       >
         <Input
           prefix={<LockOutlined />}

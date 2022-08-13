@@ -5,11 +5,11 @@ import useUser from '../../../common/hooks/useUser';
 
 const useHeaderState = () => {
   const dispatch = useAppDispatch();
-  const { isAuth, user } = useUser()
+  const { isAuth, user } = useUser();
 
   const onLogout = useCallback(() => {
     dispatch(logout());
-  }, [dispatch])
+  }, [dispatch]);
 
   return {
     onLogout,
