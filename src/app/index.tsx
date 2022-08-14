@@ -17,7 +17,7 @@ const App = () => {
         <Content className={styles.layoutContent}>
           <Routing />
         </Content>
-        <Footer>Created by Konstantin Golovnev</Footer>
+        <Footer className={styles.layoutFooter}>Created by Konstantin Golovnev</Footer>
       </Layout>
     </Spin>
   )

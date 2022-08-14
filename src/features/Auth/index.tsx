@@ -11,8 +11,10 @@ const Auth: FC = () => {
   return (
     isAuth ? <Navigate to="/" /> : (
       <PageContentLayout title={'Auth page'}>
-        <AuthForm onSubmit={onSubmit} />
-        <AuthImages />
+		<div style={{overflowY: 'auto'}}>
+		  <AuthForm onSubmit={onSubmit} />
+		  <AuthImages />
+		</div>
       </PageContentLayout>
     )
   );

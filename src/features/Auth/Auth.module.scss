@@ -8,27 +8,42 @@
 }
 
 .bgImgFirst, .bgImgSecond, .bgImgThirty {
-  position: absolute;
-  filter: opacity(0.2);
+  position: fixed;
+  filter: opacity(0.05);
   pointer-events: none;
-  @media (max-width: 1000px) {
-    display: none;
-  }
 }
 
 .bgImgFirst {
   transform: rotate(10deg);
   right: 100px;
+  top: 120px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .bgImgSecond {
   transform: rotate(-15deg);
   right: 200px;
   top: 450px;
+  @media (max-width: 1000px) {
+    top: 350px;
+  }
+  
+  @media (max-width: 650px) {
+    display: none;
+  }
 }
 
 .bgImgThirty {
   transform: rotate(25deg);
   right: 400px;
   top: 700px;
+  @media (max-width: 1000px) {
+    top: 600px;
+  }
+  
+  @media (max-width: 650px) {
+    display: none;
+  }
 }
